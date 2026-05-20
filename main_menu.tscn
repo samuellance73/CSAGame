@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dvwekeiwfk7jd" path="res://DIMIS___.TTF" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://bqdnc37varxov" path="res://volleyball-court-top-view-illustration-vector.jpg" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
@@ -29,6 +30,14 @@ grow_vertical = 2
 script = ExtResource("1_7vrkn")
 metadata/_edit_horizontal_guides_ = [-111.0]
 
+[node name="VolleyballCourtTopViewIllustrationVector" type="Sprite2D" parent="." unique_id=768914554]
+self_modulate = Color(0.39215687, 0.39215687, 0.39215687, 1)
+light_mask = 0
+visibility_layer = 4
+position = Vector2(561.25, 315.49997)
+scale = Vector2(0.9888322, 1.0989796)
+texture = ExtResource("2_fu7sn")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=930251916]
 layout_mode = 1
 anchors_preset = 8
@@ -50,6 +59,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 9
+theme_override_fonts/font = ExtResource("1_06t4h")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
@@ -64,6 +74,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 9
+theme_override_fonts/font = ExtResource("1_06t4h")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
@@ -78,6 +89,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 9
+theme_override_fonts/font = ExtResource("1_06t4h")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
@@ -110,4 +122,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]

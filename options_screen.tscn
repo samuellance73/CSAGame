@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c5i6xo1sa4wsc"]
+
+[ext_resource type="Script" uid="uid://bmjsmweywxhe3" path="res://options_screen.gd" id="1_666cw"]
+[ext_resource type="FontFile" uid="uid://dvwekeiwfk7jd" path="res://DIMIS___.TTF" id="1_ts4v6"]
+[ext_resource type="Texture2D" uid="uid://bqdnc37varxov" path="res://volleyball-court-top-view-illustration-vector.jpg" id="2_ypl1d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypl1d"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a764i"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyahr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[node name="OptionsScreen" type="Control" unique_id=1461202361]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_666cw")
+
+[node name="VolleyballCourtTopViewIllustrationVector" type="Sprite2D" parent="." unique_id=1973253]
+self_modulate = Color(0.39215687, 0.39215687, 0.39215687, 1)
+light_mask = 0
+visibility_layer = 4
+position = Vector2(561.25, 315.49997)
+scale = Vector2(0.9888322, 1.0989796)
+texture = ExtResource("2_ypl1d")
+
+[node name="Label" type="Label" parent="." unique_id=1172939205]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -105.5
+offset_top = 74.0
+offset_right = 105.5
+offset_bottom = 150.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_ts4v6")
+theme_override_font_sizes/font_size = 60
+text = "Options"
+
+[node name="Button" type="Button" parent="." unique_id=859387398]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -137.75
+offset_top = -143.0
+offset_right = 137.75
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ts4v6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypl1d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a764i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dyahr")
+text = "Back To Home"
+
+[connection signal="pressed" from="Button" to="." method="_on_home_pressed"]
