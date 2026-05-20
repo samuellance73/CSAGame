@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bmjsmweywxhe3" path="res://options_screen.gd" id="1_666cw"]
 [ext_resource type="FontFile" uid="uid://dvwekeiwfk7jd" path="res://DIMIS___.TTF" id="1_ts4v6"]
 [ext_resource type="Texture2D" uid="uid://bqdnc37varxov" path="res://volleyball-court-top-view-illustration-vector.jpg" id="2_ypl1d"]
+[ext_resource type="AudioStream" uid="uid://bfp68mxkttdkp" path="res://button_sound.mp3" id="4_a764i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypl1d"]
 bg_color = Color(1, 1, 1, 1)
@@ -45,7 +46,7 @@ position = Vector2(561.25, 315.49997)
 scale = Vector2(0.9888322, 1.0989796)
 texture = ExtResource("2_ypl1d")
 
-[node name="Label" type="Label" parent="." unique_id=1172939205]
+[node name="OptionsTitle" type="Label" parent="." unique_id=1172939205]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -95,7 +96,9 @@ offset_right = 237.0
 offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
-rounded = true
+max_value = 1.0
+step = 0.05
+value = 0.5
 tick_count = 5
 
 [node name="MusicLabel" type="Label" parent="." unique_id=1664104821]
@@ -118,7 +121,7 @@ theme_override_fonts/font = ExtResource("1_ts4v6")
 theme_override_font_sizes/font_size = 43
 text = "Sound Effects"
 
-[node name="SoundSlider" type="HSlider" parent="." unique_id=153360507]
+[node name="SFXSlider" type="HSlider" parent="." unique_id=153360507]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -131,7 +134,16 @@ offset_right = 237.0
 offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
-rounded = true
+max_value = 1.0
+step = 0.05
+value = 0.5
 tick_count = 5
 
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="." unique_id=926520867]
+position = Vector2(374.5, 208.25)
+stream = ExtResource("4_a764i")
+bus = &"SFX"
+
 [connection signal="pressed" from="BackButton" to="." method="_on_home_pressed"]
+[connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SFXSlider" to="." method="_on_sound_slider_value_changed"]

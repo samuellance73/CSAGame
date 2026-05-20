@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioStreamPlayer2d="*uid://blwr7c4tpmf7t"
+StartSound="*uid://cs4huxds4k0bq"
+GlobalAudio="*uid://bjsgx5y6ftabf"
 
 [physics]
 
