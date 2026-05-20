@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	$"/root/AudioStreamPlayer2d".play()
 	get_tree().change_scene_to_file("res://volleyball_court.tscn")
 
 

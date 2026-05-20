@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dvwekeiwfk7jd" path="res://DIMIS___.TTF" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://main_menu.gd" id="1_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://bqdnc37varxov" path="res://volleyball-court-top-view-illustration-vector.jpg" id="2_fu7sn"]
+[ext_resource type="AudioStream" uid="uid://bfp68mxkttdkp" path="res://start_sound.mp3" id="4_jix8l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
@@ -52,7 +53,7 @@ offset_bottom = 115.75
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1564816690]
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1564816690]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -67,7 +68,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
 text = "Start game"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=486932634]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/StartButton" unique_id=1733104803]
+stream = ExtResource("4_jix8l")
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=486932634]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -82,7 +86,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_06t4h")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
 text = "Options"
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1783024865]
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1783024865]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -98,7 +102,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
 text = "Exit
 "
 
-[node name="Label" type="Label" parent="." unique_id=769940547]
+[node name="Title" type="Label" parent="." unique_id=769940547]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -121,6 +125,6 @@ text = "Volley Madness"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_pressed"]
