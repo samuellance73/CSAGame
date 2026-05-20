@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dkaynntps5ij6"]
+
+[ext_resource type="Texture2D" path="res://CSAGame/icon.svg" id="1_64nw0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64nw0"]
+size = Vector2(2091, 2286)
+
+[node name="Sprite" type="Node2D" unique_id=1548636127]
+position = Vector2(25, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2141915631]
+position = Vector2(-4, -17)
+scale = Vector2(16.390625, 17.695313)
+texture = ExtResource("1_64nw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=594311374]
+position = Vector2(2.5, -25)
+shape = SubResource("RectangleShape2D_64nw0")
