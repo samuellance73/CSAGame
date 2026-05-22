@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://6ymkmqx30ccj"]
+
+[ext_resource type="Script" uid="uid://b7oil2xpwwpll" path="res://character_select.gd" id="1_1hnkh"]
+[ext_resource type="AudioStream" uid="uid://bhre31783ytvc" path="res://Nintendo Wii - Mii Channel Theme.mp3" id="2_fk7u3"]
+[ext_resource type="AudioStream" uid="uid://cwhbcmycwh3vj" path="res://vine-boom.mp3" id="3_ppjiv"]
+
+[node name="CharacterSelect" type="Control" unique_id=2108806346]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 936.0
+offset_bottom = 526.0
+script = ExtResource("1_1hnkh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1769786948]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 259.0
+offset_right = 1058.0
+offset_bottom = 539.0
+theme_override_constants/separation = 8
+
+[node name="Selected" type="Label" parent="." unique_id=1595827426]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -251.625
+offset_right = 251.625
+offset_bottom = 49.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "CHOOSE YOUR CHARACTER ARR"
+horizontal_alignment = 1
+
+[node name="CharacterPreview" type="TextureRect" parent="." unique_id=85931244]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -212.0
+offset_right = 55.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1350684908]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.5
+offset_top = -63.25
+offset_right = 231.5
+offset_bottom = 63.25
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="character2" type="Button" parent="HBoxContainer" unique_id=503877990]
+layout_mode = 2
+text = "CHOOSE ROHAN NATAGI"
+metadata/_edit_use_anchors_ = true
+
+[node name="character1" type="Button" parent="HBoxContainer" unique_id=1647116866]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "CHOOSE TAHA JAZAERI"
+metadata/_edit_use_anchors_ = true
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=196079720]
+unique_name_in_owner = true
+stream = ExtResource("2_fk7u3")
+volume_db = 12.0
+
+[node name="Vine" type="AudioStreamPlayer" parent="." unique_id=2035569537]
+unique_name_in_owner = true
+stream = ExtResource("3_ppjiv")
+
+[connection signal="button_down" from="HBoxContainer/character2" to="." method="_on_character_2_button_down"]
+[connection signal="button_down" from="HBoxContainer/character1" to="." method="_on_character_1_button_down"]
