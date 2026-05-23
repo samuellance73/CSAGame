@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://dr7mitok2sqw"]
+
+[ext_resource type="Script" uid="uid://brc7p5p8lobw" path="res://options_screen.gd" id="1_666cw"]
+[ext_resource type="FontFile" uid="uid://dvwekeiwfk7jd" path="res://DIMIS___.TTF" id="1_ts4v6"]
+[ext_resource type="Texture2D" uid="uid://b357tm21hs4ah" path="res://volleyball-court-top-view-illustration-vector.jpg" id="2_ypl1d"]
+[ext_resource type="AudioStream" uid="uid://5m7upejeexea" path="res://start_sound.mp3" id="4_a764i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypl1d"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a764i"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyahr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[node name="OptionsScreen" type="Control" unique_id=1461202361]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_666cw")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1648736204]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+use_top_left = true
+
+[node name="VolleyballCourtTopViewIllustrationVector" type="Sprite2D" parent="CenterContainer" unique_id=2030008694]
+self_modulate = Color(0.39215687, 0.39215687, 0.39215687, 1)
+light_mask = 0
+visibility_layer = 4
+position = Vector2(0, -20)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ypl1d")
+
+[node name="OptionsTitle" type="Label" parent="." unique_id=1172939205]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = -254.0
+offset_right = 105.5
+offset_bottom = -178.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ts4v6")
+theme_override_font_sizes/font_size = 60
+text = "Options"
+
+[node name="BackButton" type="Button" parent="." unique_id=859387398]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.75
+offset_top = 168.5
+offset_right = 137.75
+offset_bottom = 263.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ts4v6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypl1d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a764i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dyahr")
+text = "Back"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2097168595]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -37.5
+offset_right = 191.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 150
+
+[node name="SFXBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=839208276]
+layout_mode = 2
+
+[node name="SoundLabel" type="Label" parent="HBoxContainer/SFXBoxContainer" unique_id=957390979]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ts4v6")
+theme_override_font_sizes/font_size = 43
+text = "Sound"
+
+[node name="SFXSlider" type="HSlider" parent="HBoxContainer/SFXBoxContainer" unique_id=153360507]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+tick_count = 5
+
+[node name="MusicBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=640958430]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MusicLabel" type="Label" parent="HBoxContainer/MusicBoxContainer" unique_id=1664104821]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ts4v6")
+theme_override_font_sizes/font_size = 43
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="HBoxContainer/MusicBoxContainer" unique_id=1086941139]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.5
+tick_count = 5
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="." unique_id=926520867]
+position = Vector2(374.5, 208.25)
+stream = ExtResource("4_a764i")
+bus = &"SFX"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_home_pressed"]
+[connection signal="value_changed" from="HBoxContainer/SFXBoxContainer/SFXSlider" to="." method="_on_sound_slider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/MusicBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]

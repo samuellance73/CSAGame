@@ -1,41 +1,89 @@
-[gd_scene format=3 uid="uid://dau1jy2q7m4pp"]
+[gd_scene format=3 uid="uid://ddlsmf3wxa2dw"]
 
-[ext_resource type="Texture2D" uid="uid://ddpx78i46rvrf" path="res://CSAGame/volleyball-court-top-view-illustration-vector.jpg" id="1_o3kky"]
+[ext_resource type="Script" uid="uid://dsjmk5m8n0e08" path="res://volleyball_court.gd" id="1_70qvi"]
+[ext_resource type="Texture2D" uid="uid://b357tm21hs4ah" path="res://volleyball-court-top-view-illustration-vector.jpg" id="1_o3kky"]
+[ext_resource type="PackedScene" uid="uid://dlv8p0snx4y5s" path="res://player1.tscn" id="2_trycb"]
+[ext_resource type="PackedScene" uid="uid://cm6ifh5qipec6" path="res://player2.tscn" id="3_70qvi"]
+[ext_resource type="PackedScene" uid="uid://b363q63jrc1ug" path="res://ball.tscn" id="4_54iq8"]
+[ext_resource type="AudioStream" uid="uid://xra0mwhkm5qg" path="res://BallHitSound.mp3" id="6_54iq8"]
+[ext_resource type="AudioStream" uid="uid://ckfwufjbdkkg0" path="res://whistle.mp3" id="7_on7nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nv36p"]
-size = Vector2(36, 733)
+size = Vector2(30, 733)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tp3lc"]
-distance = -301.0
+distance = -433.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_trycb"]
-distance = 579.0
+normal = Vector2(4.371139e-08, -1)
+distance = -761.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_70qvi"]
-distance = 603.0
+normal = Vector2(-4.3711385e-08, -1)
+distance = -797.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_54iq8"]
-distance = 285.0
+distance = -399.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trycb"]
+size = Vector2(1163, 571)
 
 [node name="VolleyballCourt" type="StaticBody2D" unique_id=1549580226]
+script = ExtResource("1_70qvi")
 
 [node name="VolleyballCourtTopViewIllustrationVector" type="Sprite2D" parent="." unique_id=1782050038]
+position = Vector2(-12, 0)
 texture = ExtResource("1_o3kky")
 
 [node name="NetBoundary" type="CollisionShape2D" parent="." unique_id=687073138]
-position = Vector2(24, 20.5)
+position = Vector2(27, 20.5)
 shape = SubResource("RectangleShape2D_nv36p")
 
 [node name="BottomBoundary" type="CollisionShape2D" parent="." unique_id=573080023]
 shape = SubResource("WorldBoundaryShape2D_tp3lc")
+one_way_collision = true
 
 [node name="LeftBoundary" type="CollisionShape2D" parent="." unique_id=722396203]
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_trycb")
+one_way_collision = true
 
 [node name="RightBoundary" type="CollisionShape2D" parent="." unique_id=30811773]
+position = Vector2(23, 0)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_70qvi")
+one_way_collision = true
 
 [node name="TopBoundary" type="CollisionShape2D" parent="." unique_id=502730437]
+rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_54iq8")
+one_way_collision = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=139513440]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Player1" parent="." unique_id=547094855 instance=ExtResource("2_trycb")]
+position = Vector2(-414, -2)
+
+[node name="Player" parent="." unique_id=405067511 instance=ExtResource("3_70qvi")]
+position = Vector2(406, 8)
+
+[node name="Ball" parent="." unique_id=2134949338 instance=ExtResource("4_54iq8")]
+position = Vector2(-178, 2)
+
+[node name="BallHitSound" type="AudioStreamPlayer2D" parent="Ball" unique_id=522569047]
+position = Vector2(178, -2)
+stream = ExtResource("6_54iq8")
+bus = &"SFX"
+
+[node name="boundsArea" type="Area2D" parent="." unique_id=844104927 groups=["ball"]]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundsArea" unique_id=692462054]
+position = Vector2(3.5, 8.5)
+shape = SubResource("RectangleShape2D_trycb")
+
+[node name="WhistleSound" type="AudioStreamPlayer2D" parent="." unique_id=292849311]
+stream = ExtResource("7_on7nw")
+bus = &"SFX"
