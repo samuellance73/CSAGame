@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgibwotkn74wb"
-path="res://.godot/imported/volleyball-court-top-view-illustration-vector.jpg-6a6462a41246e572e01f45488959a5c3.ctex"
+uid="uid://rb3wuw4myic8"
+path="res://.godot/imported/Scoreboard.png-2bd4107858f6f7c9298681a93650af44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://volleyball-court-top-view-illustration-vector.jpg"
-dest_files=["res://.godot/imported/volleyball-court-top-view-illustration-vector.jpg-6a6462a41246e572e01f45488959a5c3.ctex"]
+source_file="res://Scoreboard.png"
+dest_files=["res://.godot/imported/Scoreboard.png-2bd4107858f6f7c9298681a93650af44.ctex"]
 
 [params]
 
