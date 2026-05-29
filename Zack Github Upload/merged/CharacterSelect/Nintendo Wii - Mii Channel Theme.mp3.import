@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhre31783ytvc"
+path="res://.godot/imported/Nintendo Wii - Mii Channel Theme.mp3-b46179b9490a6e2c44e12321c8ad8343.mp3str"
+
+[deps]
+
+source_file="res://CharacterSelect/Nintendo Wii - Mii Channel Theme.mp3"
+dest_files=["res://.godot/imported/Nintendo Wii - Mii Channel Theme.mp3-b46179b9490a6e2c44e12321c8ad8343.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

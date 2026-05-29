@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyhucoewkibxs"
+path="res://.godot/imported/Geometry Dash Stereo Madness soundtrack.mp3-9b205be1ffd8fa2353c5bd218efa95eb.mp3str"
+
+[deps]
+
+source_file="res://CharacterSelect/Geometry Dash Stereo Madness soundtrack.mp3"
+dest_files=["res://.godot/imported/Geometry Dash Stereo Madness soundtrack.mp3-9b205be1ffd8fa2353c5bd218efa95eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

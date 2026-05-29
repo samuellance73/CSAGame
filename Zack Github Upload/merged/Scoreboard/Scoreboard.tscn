@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b3qlj7uqg87nw"]
+
+[ext_resource type="Script" uid="uid://dlr5romswi213" path="res://Scoreboard/Scoreboard.gd" id="1_50vnw"]
+[ext_resource type="Texture2D" uid="uid://cs1j4ra1brh5t" path="res://Scoreboard/Scoreboard.png" id="1_uj5bf"]
+[ext_resource type="FontFile" uid="uid://dvwekeiwfk7jd" path="res://Fonts/DIMIS___.TTF" id="2_50vnw"]
+
+[node name="scoreboard" type="Control" unique_id=390718839]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_50vnw")
+
+[node name="ScoreboardImage" type="Sprite2D" parent="." unique_id=424222449]
+position = Vector2(-0.7500076, 7.750004)
+scale = Vector2(0.71085274, 0.6808786)
+texture = ExtResource("1_uj5bf")
+
+[node name="ScoreLeft" type="Label" parent="." unique_id=910986776]
+layout_mode = 0
+offset_left = -127.5
+offset_top = -33.0
+offset_right = -73.5
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("2_50vnw")
+theme_override_font_sizes/font_size = 60
+text = "0"
+horizontal_alignment = 1
+
+[node name="ScoreRight" type="Label" parent="." unique_id=46928313]
+layout_mode = 0
+offset_left = 73.5
+offset_top = -34.0
+offset_right = 116.5
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("2_50vnw")
+theme_override_font_sizes/font_size = 60
+text = "0"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1666391976]
