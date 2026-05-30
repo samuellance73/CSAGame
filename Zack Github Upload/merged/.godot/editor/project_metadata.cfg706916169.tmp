@@ -1,0 +1,34 @@
+[game_view]
+
+select_mode=1
+hide_selection=false
+camera_override_mode=2
+selection_prefer_group=false
+
+[editor_metadata]
+
+executable_path="C:/Users/zncalme137/Desktop/Godot_v4.6.2-stable_win64.exe"
+use_advanced_connections=false
+
+[recent_files]
+
+scenes=["res://GameObjects/ball.tscn", "res://Scoreboard/Scoreboard.tscn", "res://CharacterSelect/CharacterSelect.tscn", "res://GameObjects/volleyball_court.tscn", "res://Menu/main_menu.tscn", "res://Sounds/audio_stream_player_2d.tscn", "res://Sounds/background_music.tscn", "res://Options/options_screen.tscn", "res://main.tscn", "res://main_menu.tscn"]
+scripts=["res://signals.gd", "res://GameObjects/volleyball_court.gd", "res://Sounds/global_audio.gd", "res://GameObjects/player.gd", "res://GameObjects/ball.gd", "res://Scoreboard/scoreboard.gd", "res://Scoreboard/Scoreboard.gd", "res://Options/options_screen.gd", "res://Menu/main_menu.gd", "res://CharacterSelectStuff/character_select.gd"]
+
+[dialog_bounds]
+
+create_new_node=Rect2(285, 120, 1350, 960)
+project_settings=Rect2(0, 23, 2560, 1009)
+
+[color_picker]
+
+picker_shape=3
+recent_presets=PackedColorArray(0, 0.9490196, 0, 1, 0, 0.8745098, 0.8745098, 1, 0, 0, 0.8745098, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0.9490196, 0.9490196, 1, 0, 0, 0.9490196, 1, 0, 0, 0, 1)
+
+[script_setup]
+
+last_selected_language="GDScript"
+
+[debug_options]
+
+run_debug_collisions=false

@@ -40,7 +40,7 @@ position = Vector2(-12, 0)
 texture = ExtResource("1_o3kky")
 
 [node name="NetBoundary" type="CollisionShape2D" parent="." unique_id=687073138]
-position = Vector2(27, 20.5)
+position = Vector2(17, 20.5)
 shape = SubResource("RectangleShape2D_nv36p")
 
 [node name="BottomBoundary" type="CollisionShape2D" parent="." unique_id=573080023]

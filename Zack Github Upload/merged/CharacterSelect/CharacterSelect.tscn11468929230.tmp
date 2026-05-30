@@ -1,0 +1,266 @@
+[gd_scene format=3 uid="uid://6ymkmqx30ccj"]
+
+[ext_resource type="Script" uid="uid://b7oil2xpwwpll" path="res://CharacterSelect/character_select.gd" id="1_cp0j3"]
+[ext_resource type="AudioStream" uid="uid://bhre31783ytvc" path="res://CharacterSelect/Nintendo Wii - Mii Channel Theme.mp3" id="2_f4xif"]
+[ext_resource type="Texture2D" uid="uid://b357tm21hs4ah" path="res://GameObjects/volleyball-court-top-view-illustration-vector.jpg" id="2_fspey"]
+[ext_resource type="AudioStream" uid="uid://cyhucoewkibxs" path="res://CharacterSelect/Geometry Dash Stereo Madness soundtrack.mp3" id="2_o8d4c"]
+[ext_resource type="AudioStream" uid="uid://cwhbcmycwh3vj" path="res://CharacterSelect/vine-boom.mp3" id="3_iieb1"]
+[ext_resource type="FontFile" uid="uid://dvwekeiwfk7jd" path="res://Fonts/DIMIS___.TTF" id="3_pwbmj"]
+[ext_resource type="AudioStream" uid="uid://ckqd5fyw5hdm2" path="res://CharacterSelect/fahhhhhhhhhhhhhh.mp3" id="4_agqxj"]
+[ext_resource type="AudioStream" uid="uid://cy40q0s4tp0bw" path="res://CharacterSelect/jixaw-metal-pipe-falling-sound.mp3" id="5_6w113"]
+[ext_resource type="AudioStream" uid="uid://xxc8ogsnu2i1" path="res://CharacterSelect/rizz-sound-effect.mp3" id="6_bby4i"]
+[ext_resource type="AudioStream" uid="uid://b5suw7adaw7qp" path="res://CharacterSelect/anime-wow-sound-effect.mp3" id="7_lwlfi"]
+[ext_resource type="AudioStream" uid="uid://bfp68mxkttdkp" path="res://Sounds/start_sound.mp3" id="11_dmuwm"]
+
+[sub_resource type="Theme" id="Theme_ppjiv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwbmj"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmuwm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0drw"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1hjs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxfqk"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsver"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biia5"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krmkt"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6u8t"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[node name="character_select" type="Control" unique_id=2108806346]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ppjiv")
+script = ExtResource("1_cp0j3")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1392730906]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+use_top_left = true
+
+[node name="VolleyballCourtTopViewIllustrationVector" type="Sprite2D" parent="CenterContainer" unique_id=1560349966]
+self_modulate = Color(0.39215687, 0.39215687, 0.39215687, 1)
+light_mask = 0
+visibility_layer = 4
+position = Vector2(0, -20)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fspey")
+
+[node name="Selected" type="Label" parent="." unique_id=1595827426]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -255.0
+offset_right = 328.0
+offset_bottom = -179.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_pwbmj")
+theme_override_font_sizes/font_size = 60
+text = "Choose Your Character"
+horizontal_alignment = 1
+
+[node name="CharacterPreview" type="TextureRect" parent="." unique_id=85931244]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -142.0
+offset_right = 55.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1350684908]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -319.5
+offset_top = 24.75
+offset_right = 319.5
+offset_bottom = 151.25
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="character2" type="Button" parent="HBoxContainer" unique_id=503877990]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwbmj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_pwbmj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dmuwm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x0drw")
+text = "CHOOSE ROHAN NATOGI"
+metadata/_edit_use_anchors_ = true
+
+[node name="character1" type="Button" parent="HBoxContainer" unique_id=1647116866]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwbmj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_l1hjs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nxfqk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hsver")
+text = "CHOOSE TAHA JAZAERI"
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="Button" parent="." unique_id=270696147]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.75
+offset_top = 193.5
+offset_right = 137.75
+offset_bottom = 288.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwbmj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_biia5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_krmkt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q6u8t")
+text = "Back"
+
+[node name="Music2" type="AudioStreamPlayer2D" parent="." unique_id=1193913533]
+unique_name_in_owner = true
+stream = ExtResource("2_o8d4c")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=196079720]
+unique_name_in_owner = true
+stream = ExtResource("2_f4xif")
+volume_db = 20.0
+
+[node name="Vine" type="AudioStreamPlayer" parent="." unique_id=2035569537]
+unique_name_in_owner = true
+stream = ExtResource("3_iieb1")
+bus = &"SFX"
+
+[node name="Fah" type="AudioStreamPlayer" parent="." unique_id=2006228346]
+unique_name_in_owner = true
+stream = ExtResource("4_agqxj")
+volume_db = -17.0
+bus = &"SFX"
+
+[node name="Pipe" type="AudioStreamPlayer" parent="." unique_id=1613533436]
+unique_name_in_owner = true
+stream = ExtResource("5_6w113")
+volume_db = -2.0
+bus = &"SFX"
+
+[node name="Riz" type="AudioStreamPlayer" parent="." unique_id=1710928784]
+unique_name_in_owner = true
+stream = ExtResource("6_bby4i")
+volume_db = 12.0
+bus = &"SFX"
+
+[node name="Wow" type="AudioStreamPlayer" parent="." unique_id=1381472321]
+unique_name_in_owner = true
+stream = ExtResource("7_lwlfi")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="." unique_id=245040251]
+position = Vector2(374.5, 208.25)
+stream = ExtResource("11_dmuwm")
+bus = &"SFX"
+
+[connection signal="button_down" from="HBoxContainer/character2" to="." method="_on_character_2_button_down"]
+[connection signal="button_down" from="HBoxContainer/character1" to="." method="_on_character_1_button_down"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
