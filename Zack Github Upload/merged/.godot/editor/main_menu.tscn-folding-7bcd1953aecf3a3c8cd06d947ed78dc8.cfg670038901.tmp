@@ -1,5 +1,0 @@
-[folding]
-
-node_unfolds=[NodePath("."), PackedStringArray("Layout"), NodePath("CenterContainer"), PackedStringArray("Layout"), NodePath("CenterContainer/VolleyballCourtTopViewIllustrationVector"), PackedStringArray("Visibility", "Transform"), NodePath("VBoxContainer"), PackedStringArray("Layout"), NodePath("VBoxContainer/StartButton"), PackedStringArray("Layout", "Theme Overrides"), NodePath("VBoxContainer/OptionsButton"), PackedStringArray("Layout", "Theme Overrides"), NodePath("VBoxContainer/ExitButton"), PackedStringArray("Layout", "Theme Overrides"), NodePath("ButtonSound"), PackedStringArray("Transform"), NodePath("Title"), PackedStringArray("Layout", "Theme Overrides")]
-resource_unfolds=["res://Menu/main_menu.tscn::StyleBoxFlat_rhts7", PackedStringArray("Resource", "Corner Radius", "Shadow"), "res://Menu/main_menu.tscn::StyleBoxFlat_06t4h", PackedStringArray("Resource", "Corner Radius", "Shadow")]
-nodes_folded=[]

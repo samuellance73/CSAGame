@@ -11,32 +11,9 @@
 [ext_resource type="AudioStream" uid="uid://xxc8ogsnu2i1" path="res://CharacterSelect/rizz-sound-effect.mp3" id="6_bby4i"]
 [ext_resource type="AudioStream" uid="uid://b5suw7adaw7qp" path="res://CharacterSelect/anime-wow-sound-effect.mp3" id="7_lwlfi"]
 [ext_resource type="AudioStream" uid="uid://bfp68mxkttdkp" path="res://Sounds/start_sound.mp3" id="11_dmuwm"]
+[ext_resource type="AudioStream" uid="uid://cgkqd47bgro0a" path="res://CharacterSelect/Villager_idle1.ogg" id="12_x0drw"]
 
 [sub_resource type="Theme" id="Theme_ppjiv"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwbmj"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmuwm"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0drw"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1hjs"]
 bg_color = Color(1, 1, 1, 1)
@@ -44,6 +21,8 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+expand_margin_left = 15.0
+expand_margin_right = 15.0
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxfqk"]
@@ -55,6 +34,32 @@ corner_radius_bottom_left = 16
 shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsver"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwbmj"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmuwm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0drw"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -123,10 +128,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -321.0
-offset_top = -371.0
-offset_right = 335.0
-offset_bottom = -295.0
+offset_left = -326.0
+offset_top = -323.0
+offset_right = 330.0
+offset_bottom = -247.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_pwbmj")
@@ -143,30 +148,59 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -136.0
-offset_top = -279.0
-offset_right = 138.0
-offset_bottom = 1.0
+offset_top = -275.0
+offset_right = 132.0
+offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
+stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1350684908]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.49800003
-anchor_top = 0.53800005
-anchor_right = 0.49800003
-anchor_bottom = 0.53800005
-offset_left = -467.69604
-offset_top = 0.12597656
-offset_right = 468.30396
-offset_bottom = 126.62598
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -491.0
+offset_top = 46.0
+offset_right = 502.0
+offset_bottom = 172.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 64
 alignment = 1
+
+[node name="character4" type="Button" parent="HBoxContainer" unique_id=573887213]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwbmj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_l1hjs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nxfqk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hsver")
+text = "Choose Ginger"
+metadata/_edit_use_anchors_ = true
+
+[node name="character3" type="Button" parent="HBoxContainer" unique_id=1373486629]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pwbmj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_l1hjs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nxfqk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hsver")
+text = "Choose Indian"
+metadata/_edit_use_anchors_ = true
 
 [node name="character2" type="Button" parent="HBoxContainer" unique_id=503877990]
 layout_mode = 2
@@ -178,7 +212,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_pwbmj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dmuwm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_x0drw")
-text = "CHOOSE ROHAN NATOGI"
+text = "Choose Asian"
 metadata/_edit_use_anchors_ = true
 
 [node name="character1" type="Button" parent="HBoxContainer" unique_id=1647116866]
@@ -192,7 +226,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_l1hjs")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nxfqk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hsver")
-text = "CHOOSE TAHA JAZAERI"
+text = "Choose American"
 metadata/_edit_use_anchors_ = true
 
 [node name="BackButton" type="Button" parent="." unique_id=270696147]
@@ -202,10 +236,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -137.75
-offset_top = 193.5
-offset_right = 137.75
-offset_bottom = 288.5
+offset_left = -138.0
+offset_top = 213.0
+offset_right = 137.5
+offset_bottom = 308.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -261,6 +295,13 @@ position = Vector2(374.5, 208.25)
 stream = ExtResource("11_dmuwm")
 bus = &"SFX"
 
+[node name="hR" type="AudioStreamPlayer" parent="." unique_id=1018338875]
+unique_name_in_owner = true
+stream = ExtResource("12_x0drw")
+volume_db = 15.0
+
+[connection signal="button_down" from="HBoxContainer/character4" to="." method="_on_character_4_button_down"]
+[connection signal="button_down" from="HBoxContainer/character3" to="." method="_on_character_3_button_down"]
 [connection signal="button_down" from="HBoxContainer/character2" to="." method="_on_character_2_button_down"]
 [connection signal="button_down" from="HBoxContainer/character1" to="." method="_on_character_1_button_down"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

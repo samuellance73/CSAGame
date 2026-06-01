@@ -1,5 +1,0 @@
-[folding]
-
-node_unfolds=[NodePath("."), PackedStringArray("Collision", "Linear"), NodePath("AlphaArea"), PackedStringArray("Collision")]
-resource_unfolds=["res://GameObjects/ball.tscn::PhysicsMaterial_41u45", PackedStringArray("Resource"), "res://GameObjects/ball.tscn::RectangleShape2D_41u45", PackedStringArray("Resource"), "res://GameObjects/ball.tscn::RectangleShape2D_ktgx5", PackedStringArray("Resource"), "res://GameObjects/ball.tscn::RectangleShape2D_hgol0", PackedStringArray("Resource")]
-nodes_folded=[]

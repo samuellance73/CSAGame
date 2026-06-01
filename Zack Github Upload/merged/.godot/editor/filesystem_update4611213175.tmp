@@ -1,8 +1,0 @@
-res://GameObjects/ball.tscn
-res://GameObjects/ball.gd
-res://GameObjects/volleyball_court.gd
-res://GameObjects/volleyball_court.tscn
-res://Scoreboard/Scoreboard.tscn
-res://Scoreboard/Scoreboard.gd
-res://signals.gd
-res://CharacterSelect/CharacterSelect.tscn
